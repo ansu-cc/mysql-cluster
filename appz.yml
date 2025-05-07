@@ -1,19 +1,19 @@
     app:
-        name: MySQL
-        code: mysql
-        notify: appzdev@cloudbourne.co
+        name: MySQL-CLUSTER
+        code: mysql-cluster
+        notify: aannavarghese@ecloudcontrol.com
 
-    build:
-        version: 5.7
+    build: 8.0
+    version: 
         env: DEV
         build_file: none
         output_files: output/*.zip
-        image_template: mysql-5.7
+        image_template: mysql-8.0_cluster
 
     deploy:
         context: alpha/DEV
         type: statefulset
-        replicas: 1
+        replicas: 3
         resources: x-large
         ingress: none
         port:
@@ -21,7 +21,7 @@
 
     volumes:
       - claim: mysql-data
-        mount: /var/lib/mysql
+        mount: /appz/data
         name: data
         size: 5Gi
       - claim: mysql-backup
@@ -32,8 +32,9 @@
     properties:
         MYSQL_ROOT_PASSWORD:
           vault: MYSQL_ROOT_PASSWORD_KEY
-        MYSQL_SPRINGBOOTWEB_PASSWORD:
-          vault: MYSQL_SPRINGBOOTWEB_PASSWORD
-        MYSQL_WORDPRESS_PASSWORD:
-          vault: MYSQL_WORDPRESS_PASSWORD
+        REPLICAS: 3
+        #MYSQL_SPRINGBOOTWEB_PASSWORD:
+          #vault: MYSQL_SPRINGBOOTWEB_PASSWORD
+        #MYSQL_WORDPRESS_PASSWORD:
+          #vault: MYSQL_WORDPRESS_PASSWORD
         revision : 26
