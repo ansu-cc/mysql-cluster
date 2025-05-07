@@ -11,11 +11,9 @@
         image_template: mysql-8.0_cluster
 
     deploy:
-        context: alpha/DEV
+        context: ansu-cc/DEV
         type: statefulset
         replicas: 3
-        resources: x-large
-        ingress: none
         port:
         - 3306
 
