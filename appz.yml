@@ -3,8 +3,8 @@
         code: mysqlcluster
         notify: aannavarghese@ecloudcontrol.com
 
-    build: 8.0
-    version: 
+    build: 
+        version: 8.0
         env: DEV
         build_file: none
         output_files: output/*.zip
@@ -30,7 +30,7 @@
     properties:
         MYSQL_ROOT_PASSWORD:
           vault: MYSQL_ROOT_PASSWORD_KEY
-        #REPLICAS: 3
+        REPLICAS: 3
         #MYSQL_SPRINGBOOTWEB_PASSWORD:
           #vault: MYSQL_SPRINGBOOTWEB_PASSWORD
         #MYSQL_WORDPRESS_PASSWORD:
