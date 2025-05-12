@@ -1,5 +1,5 @@
     app:
-        name: MySQL-CLUSTER
+        name: mysql-cluster
         code: mysql-cluster
         notify: aannavarghese@ecloudcontrol.com
 
