@@ -1,6 +1,6 @@
     app:
         name: mysql-cluster
-        code: mysql-cluster
+        code: mysqlcluster
         notify: aannavarghese@ecloudcontrol.com
 
     build: 8.0
