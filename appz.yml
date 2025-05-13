@@ -13,7 +13,7 @@
     deploy:
         context: ansu-cc/DEV
         type: statefulset
-        replicas: 5
+        replicas: 3
         port:
         - 3306
 
@@ -30,7 +30,7 @@
     properties:
         MYSQL_ROOT_PASSWORD:
           vault: MYSQL_ROOT_PASSWORD_KEY
-        REPLICAS: 5
+        REPLICAS: 3
         #MYSQL_SPRINGBOOTWEB_PASSWORD:
           #vault: MYSQL_SPRINGBOOTWEB_PASSWORD
         #MYSQL_WORDPRESS_PASSWORD:
