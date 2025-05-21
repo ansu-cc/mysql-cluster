@@ -30,7 +30,9 @@
     properties:
         MYSQL_ROOT_PASSWORD:
           vault: MYSQL_ROOT_PASSWORD_KEY
-        REPLICAS: 3
+        REPLICAS: 5
+        DATA_NODE_COUNT: 5
+        MYSQL_NODE_COUNT: 1
         MYSQL_SPRINGBOOTWEB_PASSWORD:
           vault: MYSQL_SPRINGBOOTWEB_PASSWORD
         #MYSQL_WORDPRESS_PASSWORD:
