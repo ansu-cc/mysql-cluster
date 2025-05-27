@@ -30,6 +30,7 @@
     properties:
         MYSQL_ROOT_PASSWORD:
           vault: MYSQL_ROOT_PASSWORD_KEY
+        REPLICAS: 3
         MGM_REPLICAS: 1
         DATA_REPLICAS: 2
         SQL_REPLICAS: 0
